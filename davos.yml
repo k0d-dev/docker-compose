@@ -1,0 +1,15 @@
+---
+version: "2.1"
+services:
+  davos:
+    image: ghcr.io/linuxserver/davos
+    container_name: davos
+    environment:
+      - PUID=nightcom
+      - PGID=nightcom
+    volumes:
+      - /home/nightcom/davos/config:/config
+      - /mnt/hdd2tb/docker/davos/download:/download
+    ports:
+      - 13380:8080
+    restart: unless-stopped
