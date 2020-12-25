@@ -4,8 +4,8 @@ services:
     image: ghcr.io/linuxserver/radarr
     container_name: radarr
     environment:
-      - PUID=nightcom
-      - PGID=nightcom
+      - PUID=1000
+      - PGID=1000
       - TZ=Europe/Amsterdam
     volumes:
       - /home/nightcom/radarr/config:/config
