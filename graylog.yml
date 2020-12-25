@@ -28,9 +28,9 @@ services:
     image: graylog/graylog:3.3
     environment:
       # CHANGE ME (must be at least 16 characters)!
-      - GRAYLOG_PASSWORD_SECRET=WRT54GL!@!nightcom
+      - GRAYLOG_PASSWORD_SECRET=passwordsecrethavetocreate
       # Password: admin
-      - GRAYLOG_ROOT_PASSWORD_SHA2=b06568504b5bc59c6d7c8ddffbc9457c90ea91c9527c933b7bafbc74c6e18b02
+      - GRAYLOG_ROOT_PASSWORD_SHA2=44tertete344t4t56y6y6u78u7u45
       - GRAYLOG_HTTP_EXTERNAL_URI=http://127.0.0.1:9005/
     networks:
       - graylog
