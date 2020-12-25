@@ -1,0 +1,16 @@
+version: "2.1"
+services:
+  radarr:
+    image: ghcr.io/linuxserver/radarr
+    container_name: radarr
+    environment:
+      - PUID=nightcom
+      - PGID=nightcom
+      - TZ=Europe/Amsterdam
+    volumes:
+      - /home/nightcom/radarr/config:/config
+      - /home/nightcom/odinmedia/Movies.ENG:/movies
+      - /mnt/hdd2tb/torrents/downloads:/downloads
+    ports:
+      - 17878:7878
+    restart: unless-stopped
