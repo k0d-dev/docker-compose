@@ -5,8 +5,8 @@ services:
     image: ghcr.io/linuxserver/davos
     container_name: davos
     environment:
-      - PUID=nightcom
-      - PGID=nightcom
+      - PUID=1000
+      - PGID=1000
     volumes:
       - /home/nightcom/davos/config:/config
       - /mnt/hdd2tb/docker/davos/download:/download
