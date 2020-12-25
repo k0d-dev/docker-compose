@@ -1,0 +1,39 @@
+version: "3"
+networks:
+  gitea:
+    external: false
+services:
+  server:
+    image: gitea/gitea:1.13.0
+    container_name: gitea
+    environment:
+     - USER_UID=nightcom
+     - USER_GID=nightcom
+     - DB_TYPE=postgres
+     - DB_HOST=db:5432
+     - DB_NAME=gitea
+     - DB_USER=gitea
+     - DB_PASSWD=gitea
+    restart: always
+    networks:
+      - gitea
+    volumes:
+      - /home/nightcom/gitea/data:/data
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "3300:3000"
+      - "222:22"
+    depends_on:
+      - db
+  db:
+    image: postgres:9.6
+    restart: always
+    environment:
+      - POSTGRES_USER=gitea
+      - POSTGRES_PASSWORD=gitea
+      - POSTGRES_DB=gitea
+    networks:
+      - gitea
+    volumes:
+      - /home/nightcom/gitea/postgres:/var/lib/postgresql/data
