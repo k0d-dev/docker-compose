@@ -6,7 +6,7 @@ All you have to do is rename file of your favourite app on `docker-compose.yml` 
 
 
 #### IMPORTANT
-***Before executing any file, please edit and adjust according to your own needs. Some of files require IP address***
+***Before executing any file, please edit and adjust according to your own needs. Some of files require IP address or port that is already assigned to your other service that is already running.***
 
 
 Enjoy and have fun! ;)
