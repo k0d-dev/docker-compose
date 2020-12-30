@@ -4,6 +4,6 @@ Welcome on my Docker Compose repository. Here you can find examples of `docker-c
 All you have to do is rename file of your favourite app on `docker-compose.yml` or execute `docker-compose` command with `-f <filename.yml>`
 
 #### IMPORTANT
-Before executing any file, please edit and adjust according to your own needs.
+***Before executing any file, please edit and adjust according to your own needs.***
 
 Enjoy and have fun! ;)
